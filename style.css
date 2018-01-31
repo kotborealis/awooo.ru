@@ -23,34 +23,37 @@ body{
     cursor: pointer;
     text-rendering: optimizeSpeed;
     transform: rotate(90deg) scale(1) translateZ(0);
-    transition: all 0.1s ease;
+    transition: all 0.1s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 #face1{
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0.8;
 }
 
 #face2{
-    animation: idle 2s infinite;
+    animation: idle 4s infinite;
     color: #FFAA11;
-    text-shadow: 2px 2px 10px #FFAA11;
 }
 
 @keyframes idle {
     0%{
-        opacity: 0.8;
+        opacity: 0.5;
+        text-shadow: 2px 2px 5px #FFAA11;
     }
     50%{
         opacity: 1;
+        text-shadow: 2px 2px 50px #FFAA11;
     }
     100%{
-        opacity: 0.8;
+        opacity: 0.5;
+        text-shadow: 2px 2px 5px #FFAA11;
     }
 }
 
-#face:hover{
+#face:hover, #face:active{
     transform: rotate(90deg) scale(1.1);
 }
 
